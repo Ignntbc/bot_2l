@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+
+
+    <changeSet id="add-fk-users-roles" author="test_user">
+        <addForeignKeyConstraint baseTableName="users" 
+                             baseColumnNames="role_id" 
+                             referencedTableName="roles" 
+                             referencedColumnNames="id" 
+                             constraintName="fk_users_roles"/>
+    </changeSet>
+    <changeSet id="add-fk-mistakes-id-2l" author="test_user">
+        <addForeignKeyConstraint baseTableName="mistakes" 
+                             baseColumnNames="responsible_id_2l" 
+                             referencedTableName="stack-2l" 
+                             referencedColumnNames="id" 
+                             constraintName="fk_mistakes_id_2l"/>
+    </changeSet>
+    <changeSet id="add-fk-mistakes-id-3l" author="test_user">
+        <addForeignKeyConstraint baseTableName="mistakes" 
+                             baseColumnNames="responsible_id_3l" 
+                             referencedTableName="stack-2l" 
+                             referencedColumnNames="id"  
+                             constraintName="fk_mistakes_id_3l"/>
+    </changeSet>
+    <changeSet id="add-fk-users-description" author="test_user">
+        <addForeignKeyConstraint baseTableName="description" 
+                             baseColumnNames="user_id" 
+                             referencedTableName="users" 
+                             referencedColumnNames="id" 
+                             constraintName="fk_users_description"/>
+    </changeSet>
+    <changeSet id="add-fk_users-subscription" author="test_user">
+        <addForeignKeyConstraint baseTableName="subscription" 
+                             baseColumnNames="user_id" 
+                             referencedTableName="users" 
+                             referencedColumnNames="id" 
+                             constraintName="fk_users_subscription"/>
+    </changeSet>
+    <changeSet id="add-fk-mistakes-users-mistakes" author="test_user">
+        <addForeignKeyConstraint baseTableName="mistakes" 
+                             baseColumnNames="mistake_author_id"
+                             referencedTableName="users" 
+                             referencedColumnNames="id"
+                             constraintName="fk_users_mistakes"/>
+    </changeSet>
+    <changeSet id="add-fk-mistake_labels-labels-lists" author="test_user">
+        <addForeignKeyConstraint baseTableName="labels-lists" 
+                             baseColumnNames="mistake_label_id" 
+                             referencedTableName="mistake-labels" 
+                             referencedColumnNames="id" 
+                             constraintName="fk_mistake_labels-labels-lists"/>
+    </changeSet>
+    <changeSet id="add-fk-mistakes-labels-lists" author="test_user">
+        <addForeignKeyConstraint baseTableName="labels-lists" 
+                             baseColumnNames="mistake_id" 
+                             referencedTableName="mistakes" 
+                             referencedColumnNames="id" 
+                             constraintName="fk-mistakes-labels-lists"/>
+    </changeSet>
+    <changeSet id="add-fk-mistakes-description" author="test_user">
+        <addForeignKeyConstraint baseTableName="description"
+                             baseColumnNames="number_mistake"
+                             referencedTableName="mistakes" 
+                             referencedColumnNames="id" 
+                             constraintName="fk-mistakes-description"/>
+    </changeSet>
+    <changeSet id="add-fk-mistakes-subscription" author="test_user">
+        <addForeignKeyConstraint baseTableName="subscription"
+                             baseColumnNames="mistake_id"
+                             referencedTableName="mistakes"
+                             referencedColumnNames="id"
+                             constraintName="fk-mistakes-subscription"/>
+    </changeSet>
+    <changeSet id="add-fk-mistake_statuses-mistakes" author="test_user">
+        <addForeignKeyConstraint baseTableName="mistakes"
+                             baseColumnNames="status_id" 
+                             referencedTableName="mistake-statuses"
+                             referencedColumnNames="id"
+                             constraintName="fk-mistake-statuses-mistakes"/>
+    </changeSet>
+    <changeSet id="add-fk-mistake_statuses-description" author="test_user">
+        <addForeignKeyConstraint baseTableName="description" 
+                             baseColumnNames="status_id" 
+                             referencedTableName="mistake-statuses"
+                             referencedColumnNames="id"
+                             constraintName="fk-mistake-statuses-description"/>
+    </changeSet>
+</databaseChangeLog>

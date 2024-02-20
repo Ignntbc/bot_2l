@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="create-table-roles" author="test_user">
+        <createTable tableName="roles">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="role_name" type="nvarchar(64)"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-table-stack-2l" author="test_user">
+        <createTable tableName="stack-2l">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="full_name" type="nvarchar(64)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="create-table-stack-3l" author="test_user">
+        <createTable tableName="stack-3l">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="full_name" type="nvarchar(64)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-table-mistake-labels" author="test_user">
+        <createTable tableName="mistake-labels">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="nvarchar(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_main" type="bit">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="create-table-labels-lists" author="test_user">
+        <createTable tableName="labels-lists">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="mistake_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="mistake_label_id" type="int">
+                <constraints nullable="false"/>
+            </column>    
+        </createTable>    
+    </changeSet>
+
+    <changeSet id="mistake-statuses" author="test_user">
+        <createTable tableName="mistake-statuses">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="nvarchar(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="smile" type="nvarchar(64)">
+                <constraints nullable="true"/>
+            </column>
+        </createTable>    
+    </changeSet>
+
+    <changeSet id="create-table-subscription" author="test_user">
+        <createTable tableName="subscription">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="mistake_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>    
+    </changeSet>
+
+    <changeSet id="create-table-users" author="test_user">
+        <createTable tableName="users">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="tg_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_name" type="nvarchar(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="sername" type="nvarchar(64)"></column>
+            <column name="role_id" type="int"></column>
+            <column name="command" type="nvarchar(64)"></column>
+            <column name="tag_tg" type="nvarchar(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="job_title" type="nvarchar(64)"></column>
+        </createTable>    
+    </changeSet>
+
+    <changeSet id="create-table-mistakes" author="test_user">
+        <createTable tableName="mistakes">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="mistake_name" type="nvarchar(256)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="create_datetime" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="mistake_author_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="mistake_label_list_id" type="int"></column>
+            <column name="responsible_id_2l" type="int">
+            </column>
+            <column name="status_id" type="int"></column>
+            <column name="on_3l" type="bit">
+                <constraints nullable="false"/>
+            </column>
+            <column name="responsible_id_3l" type="int">
+            </column>
+        </createTable>    
+    </changeSet>
+
+    <changeSet id="create-table-description" author="test_user">
+        <createTable tableName="description">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="number_mistake" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="text_message" type="nvarchar(MAX)">
+            </column>
+            <column name="file_path" type="nvarchar(128)"></column>
+            <column name="created_at" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_message" type="bit">
+                <constraints nullable="false"/>
+            </column>
+            <column name="user_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status_id" type="int"/>
+            <column name="bts_link" type="nvarchar(128)"></column>
+            <column name="file_type" type="nvarchar(64)"></column>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
+

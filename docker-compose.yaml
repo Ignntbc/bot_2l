@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  bot:
+    container_name: bot
+    build: .
+  db:
+    image: mcr.microsoft.com/mssql/server:latest
+    environment:
+      ACCEPT_EULA: 'Y'
+      SA_PASSWORD: 'sa1po2rt3_'
+    ports:
+      - 1433:1433
+    volumes:
+      - type: bind
+        source: C:\keystore\fg\bot_2l\mssm\data
+        target: /var/opt/mssql/data
+      - type: bind
+        source: C:\keystore\fg\bot_2l\mssm\log
+        target: /var/opt/mssql/log
+      - type: bind
+        source: C:\keystore\fg\bot_2l\mssm\secrets
+        target: /var/opt/mssql/secrets

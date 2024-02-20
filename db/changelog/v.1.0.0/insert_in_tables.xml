@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="insert-mistake-statuses" author="test_user">
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Ввод"/>
+            <column name="smile" value="✍️"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Создана"/>
+            <column name="smile" value="❓"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Смотрю"/>
+            <column name="smile" value="⚙️"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Требуется уточнение"/>
+            <column name="smile" value="⏳"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Еще пример"/>
+            <column name="smile" value="✴️"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Трелло"/>
+            <column name="smile" value="✉️"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Есть решение"/>
+            <column name="smile" value="✔️"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Решено автоматически"/>
+            <column name="smile" value="✔️"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="Решено"/>
+            <column name="smile" value="✔️"/>
+        </insert>
+        <insert tableName="mistake-statuses">
+            <column name="name" value="3-я линия"/>
+            <column name="smile" value="3️⃣"/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="insert-labels" author="test_user">
+        <insert tableName="mistake-labels">
+            <column name="name" value="⚡️⚡️⚡️Молния"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Блокирующий"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Критический"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Высокий приоритет"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Средний приоритет"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Низкий приоритет"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="1К МП"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="1К Сайт"/>
+            <column name="is_main" value="true"/>
+        </insert>   
+        <insert tableName="mistake-labels">
+            <column name="name" value="1К Корзина"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="1К Поддержка"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="2К ГЕО"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="2К Интеграция"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="6К Курьеры"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="3К Каталог"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="6К Лояльность"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="6К Оплата"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="5К Сборка"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="2К Сервисы"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Решается на 1-ой линии"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Проблема настроек ГЕО"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Не тех проблема"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="3К Остатки"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="3К Поиск"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="3К Rules"/>
+            <column name="is_main" value="true"/>
+        </insert> 
+        <insert tableName="mistake-labels">
+            <column name="name" value="Консультация"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="B2B"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="1К Аналитика"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Увеличение лимита СМС"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Перевод статуса"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Недостаточно описания"/>
+            <column name="is_main" value="false"/>
+        </insert> 
+        <insert tableName="mistake-labels">
+            <column name="name" value="2К Управление заказами"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="1К МП Фронт"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="1К МП Бэк"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="ВкусМилл"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="4К Розница"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="6К Персонал"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="МП/WEB/Дарккитчен"/>
+            <column name="is_main" value="false"/>
+        </insert>  
+        <insert tableName="mistake-labels">
+            <column name="name" value="4К Склады"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="4К Распределение"/>
+            <column name="is_main" value="true"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="‼️Разбирали‼️"/>
+            <column name="is_main" value="false"/>
+        </insert>
+        <insert tableName="mistake-labels">
+            <column name="name" value="Аларм"/>
+            <column name="is_main" value="false"/>
+        </insert>                                
+    </changeSet>
+    <changeSet id="insert-roles" author="test_user">
+        <insert tableName="roles">
+            <column name="role_name" value="Admin"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="role_name" value="Bringer"/>
+        </insert>
+    </changeSet>
+    <changeSet id="insert-users" author="test_user">
+        <insert tableName="users">
+            <column name="tg_id" value="1768501308"/>
+            <column name="first_name" value="Эдуард"/>
+            <column name="sername" value="Антипов"/>
+            <column name="role_id" value="1"/>
+            <column name="tag_tg" value="igntbc"/>
+        </insert>
+        <insert tableName="users">
+            <column name="tg_id" value="5826770832"/>
+            <column name="first_name" value="Бот"/>
+            <column name="sername" value="Ботов"/>
+            <column name="role_id" value="1"/>
+            <column name="tag_tg" value="jekabotstethemov"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
